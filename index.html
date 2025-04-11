@@ -58,7 +58,7 @@
     }
 
     .box {
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.9);
       padding: 1.5rem;
       margin-bottom: 1.5rem;
       border-radius: 1rem;
@@ -140,8 +140,8 @@
       position: fixed;
       top: 120px;
       left: 20px;
-      width: 260px;
-      background-color: #fffdf8e6;
+      width: 200px;
+      background-color: rgba(255, 253, 248, 0.95);
       padding: 20px;
       border-radius: 20px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
@@ -149,7 +149,7 @@
     }
 
     .sidebar-vic h2 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       margin-bottom: 15px;
       color: #4b3f2f;
       text-align: center;
@@ -170,6 +170,22 @@
     .card-vic:hover {
       transform: translateX(5px);
       background-color: #fff5da;
+    }
+
+    .content-container {
+      margin-left: 240px;
+      padding: 0 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar-vic {
+        position: static;
+        width: auto;
+        margin: 1rem auto;
+      }
+      .content-container {
+        margin-left: 0;
+      }
     }
   </style>
 </head>
@@ -192,103 +208,9 @@
     <div class="card-vic"><a href="#contact" style="text-decoration:none; color:inherit;">🏡 Trouve des locaux qui peuvent t'accueillir</a></div>
   </div>
 
-  <section id="accueil">
-    <h1>Les Voyages Malins de Vic</h1>
-    <p>Carnet de route, bons plans et récits malins autour du monde</p>
-  </section>
-
-  <section id="destinations" class="box">
-    <h2>Destinations</h2>
-    <ul>
-      <li>🌴 Malaisie</li>
-      <li>🇮🇹 Pouilles (Italie)</li>
-      <li>✈️ À venir...</li>
-    </ul>
-  </section>
-
-  <section id="conseils" class="box">
-    <h2>Conseils malins</h2>
-    <ul>
-      <li>Voyager léger mais bien équipé</li>
-      <li>Applis indispensables en voyage</li>
-      <li>Gérer son budget au quotidien</li>
-    </ul>
-  </section>
-
-  <section id="carnet" class="box">
-    <h2>Carnet de bord</h2>
-    <p>Retrouve ici mes récits de voyage, mes galères, mes émerveillements et les petites astuces apprises sur la route. Prochainement : mes aventures en van dans les Pouilles et mon trip en sac à dos en Malaisie !</p>
-  </section>
-
-  <section id="services" class="box">
-    <h2>Services</h2>
-    <div class="service-links">
-      <a href="#formulaire">🔍 Conseils personnalisés</a>
-      <a href="#">🗓️ Prendre un rendez-vous</a>
-      <a href="#">🚒 Checklists & matériel</a>
-      <a href="#">📲 Partager mes réseaux sociaux</a>
-    </div>
-  </section>
-
-  <section id="formulaire" class="box">
-    <h2>Demande de conseils personnalisés</h2>
-    <form action="https://formspree.io/f/xqkrdnez" method="POST">
-      <label for="nom">Prénom / Nom</label>
-      <input type="text" id="nom" name="nom" required>
-
-      <label for="email">Adresse email</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="budget">Budget estimé (€)</label>
-      <input type="number" id="budget" name="budget">
-
-      <label for="personnes">Nombre de personnes</label>
-      <input type="number" id="personnes" name="personnes">
-
-      <label for="type">Type de voyage rêvé</label>
-      <select id="type" name="type">
-        <option value="">-- Choisir --</option>
-        <option value="plage">Plage</option>
-        <option value="aventure">Aventure</option>
-        <option value="nature">Nature</option>
-        <option value="culture">Culture</option>
-        <option value="vanlife">Van life</option>
-        <option value="autre">Autre</option>
-      </select>
-
-      <label for="destinations">Destinations envisagées</label>
-      <textarea id="destinations" name="destinations" rows="2"></textarea>
-
-      <label for="anciens">Voyages déjà réalisés</label>
-      <textarea id="anciens" name="anciens" rows="2"></textarea>
-
-      <label for="message">Message complémentaire (optionnel)</label>
-      <textarea id="message" name="message" rows="3"></textarea>
-
-      <button type="submit">Recevoir mes conseils personnalisés</button>
-      <input type="hidden" name="_next" value="https://vicvoyage.github.io/les-voyages-de-vic/#formulaire">
-      <p style="font-style:italic; font-size:0.9rem; color:#4b3f2f;">Une fois envoyé, tu recevras une réponse directement par email !</p>
-    </form>
-  </section>
-
-  <section id="apropos" class="box">
-    <h2>À propos de moi</h2>
-    <div style="text-align: center;">
-      <img src="AirBrush_20211103235157.jpg" alt="Photo de Vic en voyage" style="max-width: 250px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 1rem;">
-    </div>
-    <p>
-      Je m’appelle Vic, et cela fait plus de 30 ans que je sillonne les routes du monde à la recherche d’expériences uniques et authentiques.
-      Avec plus de 55 pays visités, je suis passé par toutes les façons de voyager : en van aménagé, en hôtel, en auberge, ou simplement avec mon sac à dos.
-    </p>
-    <p>
-      Au fil du temps, j’ai appris à voyager malin : optimiser mon budget, dénicher des coins peu touristiques, éviter les galères, et surtout, vivre des moments vrais.
-      Aujourd’hui, je partage tout ça ici pour t’aider à construire un voyage qui te ressemble, que tu partes pour la première fois ou que tu sois déjà un grand baroudeur !
-    </p>
-  </section>
-
-  <section id="contact" class="box">
-    <h2>Contact</h2>
-    <p>Tu veux me poser une question ou me proposer un projet ? Écris-moi sur Instagram ou via un petit formulaire (bientôt dispo) !</p>
-  </section>
+  <div class="content-container">
+    <!-- Ici tu gardes tout ton contenu : accueil, destinations, conseils, etc. -->
+    <!-- ... -->
+  </div>
 </body>
 </html>
